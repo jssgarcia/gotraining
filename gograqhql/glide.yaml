@@ -1,0 +1,6 @@
+package: github.com/jssgarcia/gotraining/gograqhql
+import:
+- package: github.com/graphql-go/handler
+- package: github.com/graphql-go/relay
+  subpackages:
+  - examples/starwars
