@@ -9,7 +9,6 @@ import (
 
 func main() {
 
-
 	// simplest relay-compliant graphql server HTTP handler
 	// using Starwars schema from `graphql-relay-go` examples
 	h := handler.New(&handler.Config{
