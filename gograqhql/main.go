@@ -9,6 +9,7 @@ import (
 
 func main() {
 
+
 	// simplest relay-compliant graphql server HTTP handler
 	// using Starwars schema from `graphql-relay-go` examples
 	h := handler.New(&handler.Config{
@@ -20,6 +21,6 @@ func main() {
 	fs := http.FileServer(http.Dir("static"))
 
 	http.Handle("/graphql", h)
-	http.Handle("/graphiql", http.StripPrefix("/graphiql",fs))
+	http.Handle("/graphiql", http.StripPrefix("/graphiql", fs))
 	http.ListenAndServe(":8080", nil)
 }
